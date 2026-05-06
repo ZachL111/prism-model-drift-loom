@@ -1,0 +1,73 @@
+{
+  "repo": "prism-model-drift-loom",
+  "language": "Haskell",
+  "category": "ML utilities",
+  "goal": "Create a Haskell reference implementation for drift workflows, centered on stream reduction, windowed input fixtures, and late-data behavior checks.",
+  "review_model": {
+    "terms": [
+      "feature drift",
+      "window width",
+      "metric stability",
+      "explainability"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "feature drift",
+      "signal": 45,
+      "slack": 51,
+      "drag": 27,
+      "confidence": 65,
+      "score": 125,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "window width",
+      "signal": 59,
+      "slack": 35,
+      "drag": 23,
+      "confidence": 62,
+      "score": 146,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "metric stability",
+      "signal": 83,
+      "slack": 20,
+      "drag": 24,
+      "confidence": 86,
+      "score": 200,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "explainability",
+      "signal": 69,
+      "slack": 35,
+      "drag": 23,
+      "confidence": 67,
+      "score": 171,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "feature drift",
+      "signal": 69,
+      "slack": 29,
+      "drag": 17,
+      "confidence": 75,
+      "score": 191,
+      "lane": "ship"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "repo": "prism-model-drift-loom",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 2,
+    "ship": 188,
+    "watch": 107
+  },
+  "terms": [
+    "feature drift",
+    "window width",
+    "metric stability",
+    "explainability"
+  ]
+}
